@@ -1,0 +1,470 @@
+
+%% bare_conf.tex
+%% V1.3
+%% 2007/01/11
+%% by Michael Shell
+%% See:
+%% http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.7 or later) with an IEEE conference paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex
+%%*************************************************************************
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+% Add the compsocconf option for Computer Society conferences.
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[conference]{../sty/IEEEtran}
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{portuges}
+\usepackage{dirtytalk}
+\usepackage{url}
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
+% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+%\usepackage{mdwmath}
+%\usepackage{mdwtab}
+% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
+% especially mdwmath.sty and mdwtab.sty which are used to format equations
+% and tables, respectively. The MDWtools set is already installed on most
+% LaTeX systems. The lastest version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+%\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\usepackage[tight,footnotesize]{subfigure}
+% subfigure.sty was written by Steven Douglas Cochran. This package makes it
+% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
+% work, it is a good idea to load it with the tight package option to reduce
+% the amount of white space around the subfigures. subfigure.sty is already
+% installed on most LaTeX systems. The latest version and documentation can
+% be obtained at:
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+
+
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+% subfig.sty, also written by Steven Douglas Cochran, is the modern
+% replacement for subfigure.sty. However, subfig.sty requires and
+% automatically loads Axel Sommerfeldt's caption.sty which will override
+% IEEEtran.cls handling of captions and this will result in nonIEEE style
+% figure/table captions. To prevent this problem, be sure and preload
+% caption.sty with its "caption=false" package option. This is will preserve
+% IEEEtran.cls handing of captions. Version 1.3 (2005/06/28) and later 
+% (recommended due to many improvements over 1.2) of subfig.sty supports
+% the caption=false option directly:
+%\usepackage[caption=false,font=footnotesize]{subfig}
+%
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% The latest version and documentation of caption.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Documentation is contained in the stfloats.sty comments as well as in the
+% presfull.pdf file. Do not use the stfloats baselinefloat ability as IEEE
+% does not allow \baselineskip to stretch. Authors submitting work to the
+% IEEE should note that IEEE rarely uses double column equations and
+% that authors should try to avoid such use. Do not be tempted to use the
+% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IEEE does
+% not format its papers in such ways.
+
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% Read the url.sty source comments for usage information. Basically,
+% \url{my_url_here}.
+
+% \hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+\bstctlcite{IEEEexample:BSTcontrol}
+\title{Uma comparação entre iniciativas de pesquisa europeias enquadradas no quarto paradigma}
+
+\author{\IEEEauthorblockN{Gabriel E. U. Martin, Leandro Naidhig,  Thiago Y. Uehara, Washington P. Marques}
+\IEEEauthorblockA{Departamento de Computação de Sorocaba\\
+Universidade Federal de São Carlos, UFSCar\\
+Sorocaba, Brazil\\
+Email:
+gabriel.martin@dcomp.sor.ufscar.br,
+leandro.naidhig@dcomp.sor.ufscar.br,\\
+thiago.uehara@dcomp.sor.ufscar.br,
+washington.silva@dcomp.sor.ufscar.br}
+}
+
+\maketitle
+
+
+\begin{abstract}
+Este artigo explora e compara o \textit{Cherenkov Telescope Array} (CTA) e a \textit{Digital Research Infrastructure for the Arts and Humanities} (DARIAH), mostra também os avanços científicos apresentados em publicações de artigos possibilitados por essas iniciativas. A escolha das iniciativas teve como critérios a diferença das áreas, a semelhança dos componentes de computação envolvidos e o fato de serem novas e ainda em desenvolvimento. As iniciativas foram comparadas de acordo com a estrutura das equipes de trabalho, a infraestrutura utilizada e as áreas da computação envolvidas.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Cherenkov Telescope Array; Digital Research Infrastructure for the Arts and Humanities; E-Science;
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introdução}
+
+O quarto paradigma é caracterizado pelo uso intensivo de dados, 
+
+\section{Iniciativas}
+
+\subsection{\textit{Cherenkov Telescope Array}}
+
+O CTA é um projeto multinacional de larga escala que visa construir um instrumento terrestre de nova geração capaz de detectar raios gama numa faixa de energia de algumas dezenas de GeV até 300 TeV. O projeto propõe a construção de duas matrizes de \textit{Imaging Atmospheric Cherenkov Telescopes} (IACTs), a primeira, no hemisfério norte em La Palma - Espanha, com ênfase no estudo de objetos extragaláticos com as menores quantidades possíveis de energia e a segunda, no hemisfério sul em Paranal - Chile, cobrindo todo o espectro de energia e concentrada em fontes galáticas. Com pelo menos 100 telescópios, é previsto que o CTA seja dez vezes mais sensível e extremamente preciso na detecção de raios gama de alta energia.\cite{CTA_technology}
+
+É esperado que o observatório gere aproximadamente 100 petabytes de dados nos primeiros 5 anos de operação, dados abertos e que serão usados por cientistas ao redor do mundo em pesquisas e simulações. Com uma quantidade tão massiva de dados, surgem desafios como a necessidade de espaço de armazenamento (big data) e de poder de processamento para redução dos dados e para o processamento de simulações de larga escala. Além de armazenados e processados, esses dados devem estar disponíveis aos pesquisadores, então faz-se necessária também a criação de interfaces e ferramentas que possibilitem que sejam acessados e analisados.\cite{CTA_data, EGI_research-stories_cta, EGI_research-infrastructures_cta}
+
+O CTA é projetado pelo \textit{CTA Consortium}, composto por 1420 membros de mais de 200 instituições em 31 países, que é responsável também por dirigir os objetivos científicos do observatório e prover componentes para as matrizes \cite{CTA_cta_consortium}.
+
+A ideia inicial do observatório foi proposta em 2005, a instalação dos primeiros telescópios está prevista para 2019, o inicio das observações para 2022 e a conclusão da construção para 2025 \cite{CTA_status}. Apesar da construção ainda estar em andamento, já existem protótipos para todos os designs de telescópios propostos \cite{CTA_technology} e o projeto hoje faz parte dos roteiros do \textit{European Strategy Forum on Research Infrastructures} (ESFRI), e das redes \textit{European Astroparticle Physics} (ASPERA) e \textit{European Astrophysics} (ASTRONET) \cite{CTA_about}.
+
+
+\subsection{\textit{Digital Research Infrastructure for the Arts and Humanities}}
+
+A DARIAH é uma rede que busca melhorar e dar suporte à pesquisas e ao ensino digital de artes e humanidades. Segundo o site oficial do projeto, \say{DARIAH é uma rede de pessoas, expertises, informação, conhecimento, conteúdo, métodos, ferramentas e tecnologias}. O projeto desenvolve, mantém e opera uma infraestrutura que dá suporte à pesquisas baseadas em ICT (\textit{Informations and Communications Technology}) e permite que pesquisadores construam, analisem e interpretem recursos digitais aos quais a rede provê preservação, acesso e disseminação e garante que boas práticas e padrões técnicos e metodológicos sejam seguidos \cite{DARIAH_about}.
+
+A iniciativa foi estabelecida como um \textit{European Research Infrastructure Consortium (ERIC)} em agosto de 2014, e hoje conta com 158 instituições parceiras em 18 países membros e outras 23 instituições em 8 países não membros \cite{DARIAH_partners}.
+
+\section{Comparação}
+\subsection{Estrutura das equipes de trabalho}
+Como o CTA ainda não está em sua fase operacional, a comparação entre a estrutura das equipes de trabalho será feita em cima do planejamento do funcionamento esperado para o CTA em sua primeira década de funcionamento descrita em \cite{1709.07997}.
+
+Para analisar o andamento das pesquisas feitas pelas equipes de trabalho, são realizadas reuniões regulares em que o CTA organiza seus projetos em pacotes de trabalho (WPs), sendo eles divididos em 12 áreas: \textit{Management, Physics, Monte Carlo, Site, Mirror, Telescope, Focal-Plane instrumentation, Electronics, Atmospheric Transmission and Calibration, Observatory, Data eQuality Assets}. Nessas reuniões, é apresentados todos os resultados que foram obtidos nos seus relatórios de progresso \cite{}.
+
+As equipes de trabalho do DARIAH são auto-organizadas e trabalham em áreas estratégicas para facilitar que suas operações estejam a serviço de comunidades acadêmicas, técnicas, editoriais ou organizacionais, definidas pelos CCV (Centros de Competência Virtual). As contribuições feitas pelas equipes são complementares às contribuições feitas individualmente pelos membros do DARIAH \cite{EGI_dariah_Working_Groups}.
+
+As equipes pertencentes aos CCV estão divididas em 4 redes:
+\begin{itemize}
+\item O CCV1 é responsável pelas fundações tecnológicas do DARIAH e permite que dados e ferramentas desenvolvidas pela comunidade sejam compartilhadas, garantindo qualidade, permanência e crescimento dos serviços técnicos para as artes e humanidades.
+\item O CCV2 é responsável pelo contato de pesquisa e educação, além de atuar como interface primária com as comunidades de pesquisa e de ensino.
+\item O CCV3 é responsável pelo gerenciamento de conteúdos acadêmicos de diversas etapas, sendo desde a criação, curadoria e a disseminação, até a junção de recursos digitais acadêmicos e a reutilização de resultados.
+\item O CCV4 é responsável pela interação de influenciados e nas artes e humanidades, tendo 20 grupos dinâmicos para iterações entre serviços nacionais sob categorias específicas de operação \cite{EGI_dariah_eric}. 
+\end{itemize}
+
+
+\subsection{Infraestrutura utilizada}
+O CTA, diferente do DARIAH, necessita de uma grande infraestrutura física, que ainda se encontra em construção, visto que as matrizes de telescópios ainda não estão completas. Além disso, mesmo que ambas as iniciativas necessitem de infraestruturas virtuais, tais infraestruturas diferem entre si. Como dito anteriormente, o CTA precisa de um alto processamento de dados enquanto o DARIAH necessita de um processamento de variados tipos de dados.
+
+
+\subsection{Áreas da computação envolvidas}
+Como visto na introdução, ambas as iniciativas tem a necessidade de gerenciar grandes quantidades de dados (\textit{big data}) e têm como objetivo deixá-los acessíveis à comunidade científica. Enquanto o DARIAH possui um processamento diversificado, por conta de sua grande variedade de estruturas e tipos de dados, e algoritmos para granular esses dados para que se tornem mais acessíveis e organizados, o CTA possui um processamento mais voltado para a realização de simulações e processamentos matemáticos, a fim de encontrar resultados para que estes sejam analisados pelos cientistas.
+
+
+\section{Avanços científicos}
+%tudo escrito aqui pode ser reescrito
+
+\subsection{CTA}
+
+Como exemplos de avanços científicos do CTA selecionamos alguns que fornecem uma visão do estado atual do projeto e das possibilidades futuras que essa iniciativa oferece. 
+
+Já foram feitas simulações com o CTA utilizando dados da galáxia Seyfert  NGC 1068 descrito no artigo {\textit{Unveiling the origin of the gamma-ray emission in NGC 1068 with the Cherenkov Telescope Array}}, para que se possa medir a precisão da captação e leitura dos raios gama. Por conta de tais simulações, foi possível afirmar que \say{considerando 50 horas de observação com CTA, será possível restringir os modelos de emissão na NGC 1068} e também que comparando as ondas recebidas com os núcleos galácticos ativos e com luminosidade bolométrica da galáxia, pode ser possível determinar se o raio gama detectado é originário de atividade nuclear no espaço ou da formação de uma estrela. \cite{LAMASTRA201916}. 
+
+Há também diversas comparações entre a capacidade do CTA em potencializar  descobertas de altas energias e de  outros telescópios  como em \textit{On the potential of Cherenkov Telescope Arrays and KM3 Neutrino Telescopes for the detection of extended sources} uma comparação entre o CTA e o KM3 Neutrino Telescope, Onde diversos cálculos realizados para análise comparativa feita entre a sensibilidade de detectação entre o CTA e o KM3, a partir da aplicação de parametrização analítica das principais quantidades de energia, caracterizada pelo processo de detectação de raios gama e neutrinos com base no tamanho da área para detectar essas energias, funções de propagação, taxas de fundo, entre outras análises para verificar a comparação de poder de sensibilidade entre o CTA e o KM3. Para verificar a capacidade de detectação das fontes estendidas por parte dos mesmos, exigirá uma análise em 3D, verificando a estrutura morfológica de muito dessas fontes e essa não é uma tarefa fácil para a astronomia de neutrinos. \cite{Ambrogi:2018skq}.
+
+No artigo\textit{Dark matter substructure modelling and sensitivity of the Cherenkov Telescope Array to Galactic dark halos} são apresentadas simulações sobre a distribuição de matéria escura na galáxia, levando em consideração sete parâmetros físicos importantes para a distribuição das subestruturas de matéria escura na galáxia e usando a biblioteca de software CLUMPY. Definindo os sete parâmetros: Espaço e massa das sub-estruturas galáticas, relação de concentração  \textit{halo-mass}, massa das partículas de matéria negra e canais de aniquilação/decaimento. Com base nessas simulações foi concluído que a pesquisa por \textit{dark halos} usando o CTA proporcionara uma visão mais ampla e detalhada de toda uma nova população de \textit{subhalos} do que apenas só observando galáxias anãs esferóidais, graças a resolução angular imprecindida do CTA
+ \cite{H_tten_2016}
+ % Vou escrever algum tipo de conclusão aqui (Ton)
+
+\subsection{DARIAH}
+A principal proposta da DARIAH é o suporte a pesquisa e ensino, graças a isso os avanços produzidos são bem diversificados, um projeto muito importante e as vezes confundido com a própria DARIAH é a \textit{Collaborative European Digital Archive Infrastructure (CENDARI)}, a CENDARI é um projeto desenvolvido com o auxilio da DARIAH, seu intuito foi a criação de um ambiente de consulta de recursos e arquivos históricos sobre o período Medieval e a Primeira Guerra Mundial com a utilização de uma interface amigável. A CENDARI disponibiliza para o usuário acesso a acervos de museus, faculdades e bibliotecas de diversos países da União Europeia, salvos em seu banco de dados, funcionalidade de compartilhamento de documentos e um mapeamento histórico dos recursos utilizados. Por conta disso, pesquisadores possuem acesso a dados e pesquisas localizadas em diversos países, apenas utilizando seu computador e o desenvolvimento de projetos torna-se mais fácil além de possibilitar a realização de projetos colaborativos.\cite{DBLP:journals/corr/BoukhelifaBBCFK16}
+
+O SSK (Standardization Survival Kit) descrito em \textit{The Standardization Survival Kit: for a Wider Use of Metadata Standards within Arts and Humanities} oferece diretrizes para criação e gerenciamento de metadados, e tem como base o projeto PARTHENOS, oferecendo um ambiente integrado de serviços e ferramentas de pesquisa em conjunto com o projeto EHRI, em que da acesso a várias descrições arquivísticas sobre o Holocausto e também com o auxilio do DARIAH. Essa plataforma tem como objetivo oferecer uma forma de modelagem de dados adequada e padrões correspondentes para tornar o conteúdo digital reutilizável, adotando melhores práticas para as comunidades acadêmicas e aderir normas específicas, por isso é considerada como uma estrutura metodológica para uso concreto de padrões. Além disso, a utilização do SSK envolve melhores práticas de pesquisas, formatos de estrutura, folhas de estilo, amostra de códigos e, o mais importante é a indicação de melhores meios para criação de metadados genéricos para uso avançado de metadados para fins de pesquisa. Esses padrões de metadados tornam os mesmos como instrumentos para realizar processos de pesquisar eficientes e reutilizáveis além de que a SSK fazendo o gerenciamento da heterogeneidade desses metadados. \cite{riondet:hal-02124679}
+ 
+
+\section{Conclusão}
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{example}  
+
+\end{document}
+
+
